@@ -1,4 +1,5 @@
 #include <bitset>
+#include <chrono>
 #include <cmath>
 #include <functional>
 #include <iostream>
@@ -10,10 +11,8 @@
 #include <set>
 #include <sstream>
 #include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <chrono>
 #include <thread>
+#include <unordered_set>
 
 #include "solutions.h"
 
@@ -76,12 +75,11 @@ void Window::fillSpiral(Matrix& matrix, Point current, int size) {
     fillLine(matrix, right_down, right_up);
     fillLine(matrix, right_up, left_down);
     fillLine(matrix, left_down, left_up);
-    print2D(matrix, os_);
-    //std::this_thread::sleep_for(std::chrono::seconds(2));
+    // Unncoment this to check how each pattern is written
+    // print2D(matrix, os_);
+    // std::this_thread::sleep_for(std::chrono::seconds(2));
 
     fillSpiral(matrix, left_up + Point{2, 0}, size - 4);
-
-
 }
 
 void Window::drawSpiral() {
