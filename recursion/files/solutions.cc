@@ -82,6 +82,23 @@ void Window::fillSpiral(Matrix& matrix, Point current, int size) {
     fillSpiral(matrix, left_up + Point{2, 0}, size - 4);
 }
 
+void Window::lukaszShape(Matrix& matrix, Point current, int size) {
+    if (size <= 0) {
+        return;
+    }
+
+    // const Point right_down = current + Point{size, 0};
+    // const Point right_up = right_down + Point{0, size};
+    // const Point left_down = right_up - Point{size, 0};
+    // const Point left_up = left_down - Point{0, size - 2};
+    // fillLine(matrix, std::max(Point{0, 0}, current - Point{1, 0}), right_down);
+    // fillLine(matrix, right_down, right_up);
+    // fillLine(matrix, right_up, left_down);
+    // fillLine(matrix, left_down, left_up);
+
+    lukaszShape(matrix, left_up + Point{2, 0}, size - 4);
+}
+
 void Window::drawSpiral() {
     Matrix matrix(size_ + 1, Row(size_ + 1, ' '));
     fillSpiral(matrix, {0, 0}, size_);

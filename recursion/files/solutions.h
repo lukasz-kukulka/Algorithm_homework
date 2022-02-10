@@ -31,6 +31,7 @@ public:
     void drawSpiral();
     void drawPattern();
     void drawPattern2();
+    void drawLukaszShape();
 
 private:
     using Row = std::vector<char>;
@@ -55,6 +56,7 @@ private:
     void fillSpiral(Matrix& matrix, Point current, int size);
     void fillPattern(Matrix& matrix, Point current, int size);
     void fillPattern2(Matrix& matrix, Point current, int size);
+    void lukaszShape(Matrix& matrix, Point current, int size);
 
 private:
     size_t size_;
