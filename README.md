@@ -1,1 +1,1 @@
-# Algorithm_homework
+All homework from Algorithm course
