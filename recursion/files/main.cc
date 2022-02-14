@@ -43,12 +43,14 @@ int main() {
     std::cout << "fibb(20): " << fibb(20) << '\n';
     std::cout << '\n';
 
-    Window window(32);
+    Window window(64);
     window.drawSpiral();
     std::cout << '\n';
     window.drawPattern();
     std::cout << '\n';
     window.drawPattern2();
+    std::cout << '\n';
+    window.drawLukaszShape();
 
     std::vector<std::string> vec{"3", "1", "2", "+", "*", "2", "/"};
     std::cout << rpn(vec.cbegin(), vec.cend()) << '\n';
