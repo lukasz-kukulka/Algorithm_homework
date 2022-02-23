@@ -82,7 +82,7 @@ IT lowerBound(IT first, IT last, const E& value, C comp = C{}) {
     return it > last ? last : it;
 }
 
-
+// begin namespace luk ////////////////////////////////////////////////////////
 namespace luk {
     template <typename IT, typename E, typename C>
     IT lowerBoundHelper(IT left, IT right, const E& value, C comp) {
@@ -94,7 +94,18 @@ namespace luk {
         const auto it = lowerBoundHelper(first, last, value, comp);
         return it > last ? last : it;
     }
-} // end namespace luk
+
+    template <typename IT, typename E, typename C>
+    IT upperBoundHelper(IT left, IT right, const E& value, C comp) {
+
+    }
+
+    template <typename IT, typename E = typename IT::value_type, typename C = std::greater<E>>
+    IT upperBound(IT first, IT last, const E& value, C comp = C{}) {
+        const auto it = upperBoundHelper(first, last, value, comp);
+        return it > last ? last : it;
+    }
+} // end namespace luk ///////////////////////////////////////////////////////////
 
 
 
