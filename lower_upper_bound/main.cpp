@@ -82,6 +82,22 @@ IT lowerBound(IT first, IT last, const E& value, C comp = C{}) {
     return it > last ? last : it;
 }
 
+
+namespace luk {
+    template <typename IT, typename E, typename C>
+    IT lowerBoundHelper(IT left, IT right, const E& value, C comp) {
+        
+    }
+
+    template <typename IT, typename E = typename IT::value_type, typename C = std::greater<E>>
+    IT lowerBound(IT first, IT last, const E& value, C comp = C{}) {
+        const auto it = lowerBoundHelper(first, last, value, comp);
+        return it > last ? last : it;
+    }
+} // end namespace luk
+
+
+
 template <typename IT, typename E, typename C>
 IT upperBoundHelper(IT left, IT right, const E& value, C comp) {
     if (left > right) {
@@ -101,6 +117,8 @@ IT upperBound(IT first, IT last, const E& value, C comp = C{}) {
     const auto it = upperBoundHelper(first, last, value, comp);
     return it > last ? last : it;
 }
+
+
 
 int main() {
     auto vec = getVec(50);
