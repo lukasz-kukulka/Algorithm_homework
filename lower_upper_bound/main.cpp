@@ -108,35 +108,17 @@ namespace luk {
     IT lowerBoundHelper(IT left, IT right, const E& value, C comp) {
         size_t distance = std::distance(left, right) / 2;
         IT mid = std::next(left, distance);
-        std::cout << std::endl;
-        std::cout << std::endl;
-        std::cout << "-----------   BEFORE   -------------" << std::endl;
-        std::cout << "LEFT = " << *left << "        MID = " << *mid << "       RIGHT =  " << *right << "       DISTANCE = " << distance << std::endl;
-        std::cout << std::endl;
-        std::getchar();
         while (left < mid) {
             if (comp(value, *mid)) {
                 left = mid;
                 distance = std::distance(mid, right) / 2;
                 mid = std::next(mid, distance);
-                std::cout << "-----------   IF   -------------" << std::endl;
-                std::cout << "LEFT = " << *left << "        MID = " << *mid << "       RIGHT =  " << *right << "       DISTANCE = " << distance << std::endl;
-                std::cout << std::endl;
             } else {
                 right = std::next(mid);
                 distance = std::distance(left, mid) / 2;
                 mid = std::next(left, distance);
-
-                //mid = std::prev(right, distance);
-                std::cout << "-----------   ELSE   -------------" << std::endl;
-                std::cout << "LEFT = " << *left << "        MID = " << *mid << "       RIGHT =  " << *right << "       DISTANCE = " << distance << std::endl;
-                std::cout << std::endl;
             }
-            //IT mid = std::next(left, distance);
-            std::getchar();
         }
-        std::cout << std::endl;
-        std::cout << "RETURN : ";
         return std::next(left);
     }
 
