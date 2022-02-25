@@ -130,7 +130,20 @@ namespace luk {
 
     template <typename IT, typename E, typename C>
     IT upperBoundHelper(IT left, IT right, const E& value, C comp) {
-
+        size_t distance = std::distance(left, right) / 2;
+        IT mid = std::next(left, distance);
+        while (left < mid) {
+            if (comp(value, *mid) || isEqual(*mid, value, comp)) {
+                left = mid;
+                distance = std::distance(mid, right) / 2;
+                mid = std::next(mid, distance);
+            } else {
+                right = std::next(mid);
+                distance = std::distance(left, mid) / 2;
+                mid = std::next(left, distance);
+            }
+        }
+        return std::next(left);
     }
 
     template <typename IT, typename E = typename IT::value_type, typename C = std::greater<E>>
@@ -150,7 +163,7 @@ int main() {
     separator();
 
     std::cout << "C) First pos of 7: " << std::distance(vec.cbegin(), luk::lowerBound(vec.cbegin(), vec.cend(), 7)) << '\n';
-   // std::cout << "C) Last pos of 7: " << std::distance(vec.cbegin(), luk::upperBound(vec.cbegin(), vec.cend(), 7)) << '\n';
+    std::cout << "C) Last pos of 7: " << std::distance(vec.cbegin(), luk::upperBound(vec.cbegin(), vec.cend(), 7)) << '\n';
     separator();
 
     return 0;
