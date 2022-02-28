@@ -15,15 +15,21 @@ void printVector(std::vector<T>& vec) {
     std::cout << '\n';
 }
 
+void separator(std::string name) {
+    std::cout << "-------------------- " << name << " -------------------------\n";
+}
+
 void separator() {
-    std::cout << "----------------------------------------------------\n\n";
+    std::cout << "----------------------------------------------------------\n\n";
 }
 
 int main() {
+    separator("bubble sort");
     std::vector<int> testVector{ 2, 4, 11, 4, 6, 9, 1, 112, 44, 66, 999, 7 };
     printVector(testVector);
     testVector = generateVector(testVector, 0, 100, 1000);
     bubble(testVector);
     printVector(testVector);
+    separator();
     return 0;
 }
