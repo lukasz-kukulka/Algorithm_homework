@@ -10,3 +10,17 @@ void bubble(std::vector<T>& vec) {
         }
     }
 }
+
+template <typename T>
+void bubbleLinear(std::vector<T>& vec) {
+    auto iterator = 0;
+    for (int i = 0; i < vec.size(); iterator++) {
+        if (iterator == vec.size() - 1) {
+            i++;
+            iterator = 0;
+        }
+        if (vec[iterator] > vec[iterator + 1]) {
+            std::swap(vec[iterator], vec[iterator + 1]);
+        }
+    }
+}
