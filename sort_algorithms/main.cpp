@@ -1,9 +1,19 @@
 #include <iostream>
 #include "bubble_sort/bubble.hpp"
+#include "selection_sort/selection.hpp"
 #include <vector>
+#include <random>
 
 template<typename T>
-std::vector<T> generateVector(std::vector<T>& vec, int minValue = 0, int maxValue = 100, int size = 1000) {
+std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxValue = 100, int size = 25) {
+    vec.clear();
+    vec.reserve(size);
+    std::random_device seed;
+    std::mt19937 randomNumber{seed()}; 
+    std::uniform_int_distribution<int> range(minValue, maxValue);
+    for (int i = 0; i < vec.capacity(); i++) {
+        vec.push_back(range(randomNumber));
+    }
     return vec;
 }
 
@@ -25,9 +35,9 @@ void separator() {
 
 int main() {
     separator("bubble sort");
-    std::vector<int> testVector{ 2, 4, 11, 4, 6, 9, 1, 112, 44, 66, 999, 7 };
+    std::vector<int> testVector;
+    generateVector(testVector);
     printVector(testVector);
-    testVector = generateVector(testVector, 0, 100, 1000);
     bubble(testVector);
     printVector(testVector);
     separator();
