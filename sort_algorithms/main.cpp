@@ -34,12 +34,27 @@ void separator() {
 }
 
 int main() {
-    separator("bubble sort");
-    std::vector<int> testVector;
-    generateVector(testVector);
-    printVector(testVector);
-    bubble(testVector);
-    printVector(testVector);
-    separator();
+    {
+        separator("bubble sort");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        bubble(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("selection sort");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        selection(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+
+
     return 0;
 }
