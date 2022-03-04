@@ -45,15 +45,14 @@ int main() {
     }
 
     {
-        separator("selection sort");
+        separator("selection sort first");
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        selection(testVector);
+        selectionFirst(testVector);
         printVector(testVector);
         separator();
     }
-
 
 
     return 0;

@@ -1,7 +1,8 @@
 #include <vector>
+#include <algorithm>
 
 template <typename T>
-void selection(std::vector<T>& vec) {
+void selectionFirst(std::vector<T>& vec) {
     int tempValue { };
     for (int i = 0; i < vec.size(); i++) {
         tempValue = i;
@@ -11,5 +12,14 @@ void selection(std::vector<T>& vec) {
             }
         }
         std::swap(vec[i], vec[tempValue]);
+    }
+}
+
+template <typename T>
+void selectionSecond(std::vector<T>& vec) {
+    auto tempValue { };
+    for (auto i = vec.begin(); i < vec.end(); i++) {
+        tempValue = std::min_element(i, vec.end());
+        std::swap(*i, *tempValue);
     }
 }
