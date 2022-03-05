@@ -54,6 +54,15 @@ int main() {
         separator();
     }
 
+    {
+        separator("selection sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        selectionSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
 
     return 0;
 }
