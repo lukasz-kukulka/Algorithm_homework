@@ -17,7 +17,7 @@ void selectionFirst(std::vector<T>& vec) {
 
 template <typename T>
 void selectionSecond(std::vector<T>& vec) {
-    auto tempValue { };
+    auto tempValue { vec.begin() };
     for (auto i = vec.begin(); i < vec.end(); i++) {
         tempValue = std::min_element(i, vec.end());
         std::swap(*i, *tempValue);
