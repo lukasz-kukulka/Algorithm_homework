@@ -2,6 +2,7 @@
 #include "bubble_sort/bubble.hpp"
 #include "selection_sort/selection.hpp"
 #include "insert_sort/insert.hpp"
+#include "bucket_sort/bucket.hpp"
 #include <vector>
 #include <random>
 
@@ -81,6 +82,16 @@ int main() {
         generateVector(testVector);
         printVector(testVector);
         insertSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("bucket sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        bucketFirst(testVector);
         printVector(testVector);
         separator();
     }
