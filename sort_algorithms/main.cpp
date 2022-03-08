@@ -96,5 +96,15 @@ int main() {
         separator();
     }
 
+    {
+        separator("bucket sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        bucketSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
+
     return 0;
 }
