@@ -22,5 +22,21 @@ void bucketFirst(std::vector<T>& vec) {
 
 template <typename T>
 void bucketSecond(std::vector<T>& vec) { 
-
+    const auto [first, second] = std::ranges::minmax_element(vec);
+    const auto min { *first };
+    const auto max { *second };
+    std::vector<T> tempVec(max - min + 1);
+    for (auto i = vec.begin(); i < vec.end(); i++) {
+        ++tempVec[*i - min];
+    }
+    auto iterator = vec.begin();
+    auto sortedIterator = 0;
+    for (auto i = tempVec.begin(); i < tempVec.end(); i++) {
+        while (*i > 0) {
+            *iterator = sortedIterator + min;
+            iterator++;
+            (*i)--;
+        }
+        sortedIterator++;
+    }
 }
