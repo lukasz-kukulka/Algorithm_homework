@@ -2,7 +2,7 @@
 
 template <typename T>
 void insertFirst(std::vector<T>& vec) { 
-    for (int i = 0; i < vec.size(); i++) {
+    for (int i = 0; i < static_cast<int>(vec.size()); i++) {
         for (int j = 0; j < i - 1; j++) {
             if (vec[i] > vec[j]) {
                 std::swap(vec[i], vec[j]);

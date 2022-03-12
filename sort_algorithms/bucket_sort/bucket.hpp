@@ -12,9 +12,9 @@ void bucketFirst(std::vector<T>& vec) {
         ++tempVec[ele - min];
     }
     int iterator = 0;
-    for (int i = 0; i < tempVec.size(); i++) {
+    for (size_t i = 0; i < tempVec.size(); i++) {
         while (tempVec[i] > 0) {
-            vec[iterator++] = i + min;
+            vec[iterator++] = static_cast<int>(i) + min;
             tempVec[i]--;
         }
     }

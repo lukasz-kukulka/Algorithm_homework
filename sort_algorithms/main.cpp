@@ -13,7 +13,7 @@ std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxV
     std::random_device seed;
     std::mt19937 randomNumber{seed()}; 
     std::uniform_int_distribution<int> range(minValue, maxValue);
-    for (int i = 0; i < vec.capacity(); i++) {
+    for (size_t i = 0; i < vec.capacity(); i++) {
         vec.push_back(range(randomNumber));
     }
     return vec;
