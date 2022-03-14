@@ -110,7 +110,7 @@ int main() {
     {
         separator("radix sort first");
         std::vector<int> testVector;
-        generateVector(testVector);
+        generateVector(testVector, 0, 1000, 10);
         printVector(testVector);
         radixFirst(testVector);
         printVector(testVector);
