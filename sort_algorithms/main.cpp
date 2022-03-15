@@ -4,6 +4,7 @@
 #include "insert_sort/insert.hpp"
 #include "bucket_sort/bucket.hpp"
 #include "radix_sort/radix.hpp"
+#include "merge_sort/merge.hpp"
 #include <vector>
 #include <random>
 
@@ -113,6 +114,16 @@ int main() {
         generateVector(testVector, 0, 1000, 10);
         printVector(testVector);
         radixFirst(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("merge sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        mergeFirst(testVector);
         printVector(testVector);
         separator();
     }
