@@ -128,5 +128,15 @@ int main() {
         separator();
     }
 
+    {
+        separator("merge sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        mergeSecond(testVector.begin(), testVector.end());
+        printVector(testVector);
+        separator();
+    }
+
     return 0;
 }
