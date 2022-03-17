@@ -123,7 +123,7 @@ int main() {
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        mergeFirst(testVector);
+        mergeFirst(testVector, 0, static_cast<int>(testVector.size()));
         printVector(testVector);
         separator();
     }
