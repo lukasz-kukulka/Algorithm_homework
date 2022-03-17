@@ -129,7 +129,7 @@ int main() {
     }
 
     {
-        separator("merge sort first");
+        separator("merge sort second");
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);

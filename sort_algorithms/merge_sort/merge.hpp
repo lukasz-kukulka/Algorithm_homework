@@ -9,6 +9,5 @@ void mergeFirst(std::vector<T>& vec, int begin = 0, int end = 0) {
 
 template <typename IT>
 void mergeSecond(IT begin, IT end) { 
-    end = begin + end;
-    vec.size();
+    std::cout << *begin + *end;
 }
