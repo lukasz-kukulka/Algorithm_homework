@@ -5,6 +5,7 @@
 #include "bucket_sort/bucket.hpp"
 #include "radix_sort/radix.hpp"
 #include "merge_sort/merge.hpp"
+#include "quick_sort/quick.hpp"
 #include <vector>
 #include <random>
 
@@ -134,6 +135,16 @@ int main() {
         generateVector(testVector);
         printVector(testVector);
         mergeSecond(testVector.begin(), testVector.end() - 1);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("quick sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        quickFirst(testVector);
         printVector(testVector);
         separator();
     }
