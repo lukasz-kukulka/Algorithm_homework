@@ -149,5 +149,15 @@ int main() {
         separator();
     }
 
+    {
+        separator("quick sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        mergeSecond(testVector.begin(), testVector.end() - 1);
+        printVector(testVector);
+        separator();
+    }
+
     return 0;
 }
