@@ -2,7 +2,8 @@
 #include <vector>
 
 template <typename T>
-void quickFirst(std::vector<T>& vec) {
+void quickFirst(std::vector<T>& vec, int first, int last) {
+
 
 }
 

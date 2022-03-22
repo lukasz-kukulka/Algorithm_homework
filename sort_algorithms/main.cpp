@@ -144,7 +144,7 @@ int main() {
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        quickFirst(testVector);
+        quickFirst(testVector, 0, static_cast<int>(testVector.size() - 1));
         printVector(testVector);
         separator();
     }
