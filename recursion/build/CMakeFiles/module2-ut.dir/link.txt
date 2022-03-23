@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/module2-ut.dir/tests/test.cc.o CMakeFiles/module2-ut.dir/files/solutions.cc.o -o module2-ut  lib/libgtest_main.a lib/libgtest.a 

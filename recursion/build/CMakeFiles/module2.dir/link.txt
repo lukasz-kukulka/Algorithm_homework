@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/module2.dir/files/main.cc.o CMakeFiles/module2.dir/files/solutions.cc.o -o module2 
