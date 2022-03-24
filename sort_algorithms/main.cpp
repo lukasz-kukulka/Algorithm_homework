@@ -3,13 +3,13 @@
 #include <vector>
 
 template<typename T = int>
-std::vector<T> generateVector(int minValue = 0, int maxValue = 100, int size = 1000) {
-    std::vector<int> vec(size);
+std::vector<T> generateVector(std::vector<T>& vec, int minValue = 0, int maxValue = 100, int size = 1000) {
     return vec;
 }
 
 int main() {
-    auto testVector = generateVector(0, 100, 1000);
+    std::vector<int> testVector(10);
+    testVector = generateVector(testVector, 0, 100, 1000);
     bubble(testVector);
     return 0;
 }
