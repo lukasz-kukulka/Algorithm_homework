@@ -144,7 +144,7 @@ int main() {
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        quickFirst(testVector, 0, static_cast<int>(testVector.size() - 1));
+        callQuickFirst(testVector);
         printVector(testVector);
         separator();
     }
@@ -154,7 +154,7 @@ int main() {
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        mergeSecond(testVector.begin(), testVector.end() - 1);
+        quickSecond(testVector.begin(), testVector.end() - 1);
         printVector(testVector);
         separator();
     }
