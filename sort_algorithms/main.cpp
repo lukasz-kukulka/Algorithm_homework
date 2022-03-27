@@ -7,6 +7,10 @@ std::vector<T> generateVector(std::vector<T>& vec, int minValue = 0, int maxValu
     return vec;
 }
 
+void separator() {
+    std::cout << "----------------------------------------------------\n\n";
+}
+
 int main() {
     std::vector<int> testVector(10);
     testVector = generateVector(testVector, 0, 100, 1000);
