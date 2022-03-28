@@ -27,5 +27,10 @@ void quickSecond(IT first, IT last) {
 
 template <typename T>
 void callQuickFirst(std::vector<T> vec) {
+
+}
+
+template <typename T>
+void callQuickSecond(std::vector<T> vec) {
     
 }

@@ -154,7 +154,7 @@ int main() {
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        quickSecond(testVector.begin(), testVector.end() - 1);
+        callQuickSecond(testVector);
         printVector(testVector);
         separator();
     }
