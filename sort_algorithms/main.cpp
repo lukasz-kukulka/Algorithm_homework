@@ -142,22 +142,22 @@ int main() {
     {
         separator("quick sort first");
         std::vector<int> testVector;
-        generateVector(testVector);
+        generateVector(testVector, 0, 19, 10);
         printVector(testVector);
         callQuickFirst(testVector);
         printVector(testVector);
         separator();
     }
 
-    {
-        separator("quick sort second");
-        std::vector<int> testVector;
-        generateVector(testVector);
-        printVector(testVector);
-        callQuickSecond(testVector);
-        printVector(testVector);
-        separator();
-    }
+    // {
+    //     separator("quick sort second");
+    //     std::vector<int> testVector;
+    //     generateVector(testVector);
+    //     printVector(testVector);
+    //     callQuickSecond(testVector);
+    //     printVector(testVector);
+    //     separator();
+    // }
 
     return 0;
 }
