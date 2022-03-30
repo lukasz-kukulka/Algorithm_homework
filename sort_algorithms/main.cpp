@@ -149,15 +149,15 @@ int main() {
         separator();
     }
 
-    // {
-    //     separator("quick sort second");
-    //     std::vector<int> testVector;
-    //     generateVector(testVector);
-    //     printVector(testVector);
-    //     callQuickSecond(testVector);
-    //     printVector(testVector);
-    //     separator();
-    // }
+    {
+        separator("quick sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        callQuickSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
 
     return 0;
 }

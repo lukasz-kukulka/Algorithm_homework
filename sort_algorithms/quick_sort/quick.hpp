@@ -20,8 +20,19 @@ void quickFirst(std::vector<T>& vec, int first, int last) {
 
 template <typename IT>
 void quickSecond(IT first, IT last) {
-    first++;
-    last++;
+    const auto pivot { *first };
+    auto greater { first };
+    if (first >= last) {
+        return;
+    }
+    for (auto i = std::next(first); i <= last; i++) {
+        if (*i < pivot) {
+            std::swap(*i, *++greater);
+        }
+    }
+    std::swap(*first, *greater);
+    quickSecond(first, greater);
+    quickSecond(std::next(greater), last);
 }
 
 template <typename T>
