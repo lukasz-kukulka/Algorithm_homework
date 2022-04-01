@@ -195,27 +195,19 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o
  /usr/include/c++/11/bits/ostream.tcc
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
- /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/bubble_sort/bubble.hpp
- /usr/include/c++/11/vector
- /usr/include/c++/11/bits/stl_uninitialized.h
- /usr/include/c++/11/bits/stl_vector.h
- /usr/include/c++/11/bits/stl_bvector.h
- /usr/include/c++/11/bits/vector.tcc
- /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/selection_sort/selection.hpp
- /usr/include/c++/11/algorithm
- /usr/include/c++/11/utility
- /usr/include/c++/11/bits/stl_relops.h
- /usr/include/c++/11/bits/ranges_algo.h
- /usr/include/c++/11/bits/ranges_algobase.h
- /usr/include/c++/11/iterator
- /usr/include/c++/11/bits/stream_iterator.h
- /usr/include/c++/11/bits/invoke.h
- /usr/include/c++/11/bits/ranges_util.h
- /usr/include/c++/11/pstl/glue_algorithm_defs.h
+ /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/benchmark/benchmark.hpp
+ /usr/include/c++/11/chrono
+ /usr/include/c++/11/ratio
+ /usr/include/c++/11/limits
+ /usr/include/c++/11/ctime
+ /usr/include/c++/11/bits/parse_numbers.h
  /usr/include/c++/11/functional
  /usr/include/c++/11/tuple
+ /usr/include/c++/11/utility
+ /usr/include/c++/11/bits/stl_relops.h
  /usr/include/c++/11/array
  /usr/include/c++/11/bits/uses_allocator.h
+ /usr/include/c++/11/bits/invoke.h
  /usr/include/c++/11/bits/refwrap.h
  /usr/include/c++/11/bits/std_function.h
  /usr/include/c++/11/unordered_map
@@ -226,6 +218,24 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o
  /usr/include/c++/11/bits/node_handle.h
  /usr/include/c++/11/bits/unordered_map.h
  /usr/include/c++/11/bits/erase_if.h
+ /usr/include/c++/11/vector
+ /usr/include/c++/11/bits/stl_uninitialized.h
+ /usr/include/c++/11/bits/stl_vector.h
+ /usr/include/c++/11/bits/stl_bvector.h
+ /usr/include/c++/11/bits/vector.tcc
+ /usr/include/c++/11/map
+ /usr/include/c++/11/bits/stl_tree.h
+ /usr/include/c++/11/bits/stl_map.h
+ /usr/include/c++/11/bits/stl_multimap.h
+ /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/bubble_sort/bubble.hpp
+ /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/selection_sort/selection.hpp
+ /usr/include/c++/11/algorithm
+ /usr/include/c++/11/bits/ranges_algo.h
+ /usr/include/c++/11/bits/ranges_algobase.h
+ /usr/include/c++/11/iterator
+ /usr/include/c++/11/bits/stream_iterator.h
+ /usr/include/c++/11/bits/ranges_util.h
+ /usr/include/c++/11/pstl/glue_algorithm_defs.h
  /usr/include/c++/11/pstl/execution_defs.h
  /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/insert_sort/insert.hpp
  /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/bucket_sort/bucket.hpp
@@ -241,7 +251,6 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o
  /usr/include/bits/mathcalls-narrow.h
  /usr/include/bits/iscanonical.h
  /usr/include/c++/11/bits/specfun.h
- /usr/include/c++/11/limits
  /usr/include/c++/11/tr1/gamma.tcc
  /usr/include/c++/11/tr1/special_function_util.h
  /usr/include/c++/11/tr1/bessel_function.tcc

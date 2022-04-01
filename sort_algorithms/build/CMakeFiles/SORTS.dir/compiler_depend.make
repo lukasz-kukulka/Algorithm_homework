@@ -192,27 +192,19 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../bubble_sort/bubble.hpp \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  ../selection_sort/selection.hpp \
-  /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/bits/ranges_algo.h \
-  /usr/include/c++/11/bits/ranges_algobase.h \
-  /usr/include/c++/11/iterator \
-  /usr/include/c++/11/bits/stream_iterator.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/ranges_util.h \
-  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  ../benchmark/benchmark.hpp \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/array \
   /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/unordered_map \
@@ -223,6 +215,24 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  ../bubble_sort/bubble.hpp \
+  ../selection_sort/selection.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/ranges_algo.h \
+  /usr/include/c++/11/bits/ranges_algobase.h \
+  /usr/include/c++/11/iterator \
+  /usr/include/c++/11/bits/stream_iterator.h \
+  /usr/include/c++/11/bits/ranges_util.h \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
   /usr/include/c++/11/pstl/execution_defs.h \
   ../insert_sort/insert.hpp \
   ../bucket_sort/bucket.hpp \
@@ -238,7 +248,6 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/iscanonical.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
   /usr/include/c++/11/tr1/bessel_function.tcc \
@@ -270,6 +279,20 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/numeric:
 
+/usr/include/c++/11/bits/random.tcc:
+
+/usr/include/c++/11/x86_64-redhat-linux/bits/opt_random.h:
+
+/usr/include/c++/11/bits/random.h:
+
+/usr/include/c++/11/random:
+
+../merge_sort/merge.hpp:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
 /usr/include/stdlib.h:
 
 /usr/include/c++/11/bits/locale_classes.h:
@@ -283,6 +306,8 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/stl_algo.h:
 
 /usr/include/bits/types/__sigset_t.h:
+
+../benchmark/benchmark.hpp:
 
 /usr/include/bits/setjmp.h:
 
@@ -315,8 +340,6 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
-
-/usr/include/bits/stdio_lim.h:
 
 /usr/include/bits/waitflags.h:
 
@@ -362,8 +385,6 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
-/usr/include/c++/11/tr1/poly_laguerre.tcc:
-
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/stdint-intn.h:
@@ -406,8 +427,6 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
-/usr/include/c++/11/x86_64-redhat-linux/bits/opt_random.h:
-
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
@@ -422,13 +441,15 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/bits/types/struct_tm.h:
 
+../radix_sort/radix.hpp:
+
+/usr/include/bits/types.h:
+
 /usr/include/gnu/stubs.h:
 
 /usr/include/c++/11/bits/stl_numeric.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/c++/11/x86_64-redhat-linux/bits/os_defines.h:
 
 /usr/include/bits/floatn-common.h:
 
@@ -478,7 +499,11 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/tuple:
 
+/usr/include/c++/11/bits/stl_tree.h:
+
 /usr/include/time.h:
+
+/usr/include/c++/11/bits/stl_multimap.h:
 
 ../main.cpp:
 
@@ -501,6 +526,10 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/x86_64-redhat-linux/bits/cpu_defines.h:
+
+../quick_sort/quick.hpp:
+
+/usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -525,8 +554,6 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
-
-/usr/include/c++/11/bits/random.tcc:
 
 /usr/include/c++/11/tr1/gamma.tcc:
 
@@ -606,6 +633,8 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/bits/ranges_base.h:
 
+/usr/include/c++/11/map:
+
 /usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/stdc-predef.h:
@@ -617,6 +646,8 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/functional_hash.h:
 
 /usr/include/c++/11/cstdio:
+
+/usr/include/c++/11/chrono:
 
 /usr/include/bits/wordsize.h:
 
@@ -684,39 +715,29 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/bits/istream.tcc:
 
-/usr/include/c++/11/vector:
+/usr/include/bits/stdio_lim.h:
 
-/usr/include/c++/11/bits/stl_uninitialized.h:
+/usr/include/c++/11/ratio:
 
-/usr/include/c++/11/bits/stl_bvector.h:
-
-/usr/include/c++/11/pstl/pstl_config.h:
-
-../selection_sort/selection.hpp:
-
-/usr/include/c++/11/bits/stl_relops.h:
-
-/usr/include/c++/11/x86_64-redhat-linux/bits/gthr.h:
-
-/usr/include/c++/11/bits/stl_iterator.h:
-
-/usr/include/c++/11/bits/ranges_algo.h:
-
-/usr/include/c++/11/bits/invoke.h:
+/usr/include/c++/11/limits:
 
 /usr/include/bits/uintn-identity.h:
 
 /usr/include/c++/11/bits/ranges_util.h:
 
-/usr/include/c++/11/limits:
+/usr/include/c++/11/ctime:
 
-/usr/include/c++/11/stdexcept:
+/usr/include/c++/11/x86_64-redhat-linux/bits/os_defines.h:
 
-/usr/include/c++/11/pstl/glue_algorithm_defs.h:
+/usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/bits/timex.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/c++/11/bits/invoke.h:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -736,6 +757,28 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/bits/erase_if.h:
 
+/usr/include/c++/11/vector:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/c++/11/bits/stl_bvector.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/pstl/pstl_config.h:
+
+../selection_sort/selection.hpp:
+
+/usr/include/c++/11/x86_64-redhat-linux/bits/gthr.h:
+
+/usr/include/c++/11/bits/stl_iterator.h:
+
+/usr/include/c++/11/bits/ranges_algo.h:
+
+/usr/include/c++/11/stdexcept:
+
+/usr/include/c++/11/pstl/glue_algorithm_defs.h:
+
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/c++/11/pstl/execution_defs.h:
@@ -743,8 +786,6 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 ../bucket_sort/bucket.hpp:
 
 /usr/include/math.h:
-
-../merge_sort/merge.hpp:
 
 /usr/include/bits/math-vector.h:
 
@@ -771,17 +812,3 @@ CMakeFiles/SORTS.dir/main.cpp.o: ../main.cpp \
 ../bubble_sort/bubble.hpp:
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
-
-/usr/include/c++/11/tr1/riemann_zeta.tcc:
-
-/usr/include/bits/types.h:
-
-../radix_sort/radix.hpp:
-
-/usr/include/c++/11/bits/concept_check.h:
-
-../quick_sort/quick.hpp:
-
-/usr/include/c++/11/random:
-
-/usr/include/c++/11/bits/random.h:
