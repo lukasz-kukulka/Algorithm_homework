@@ -1,6 +1,7 @@
 #include <iostream>
 #include "bubble_sort/bubble.hpp"
 #include "selection_sort/selection.hpp"
+#include "insert_sort/insert.hpp"
 #include <vector>
 #include <random>
 
@@ -60,6 +61,26 @@ int main() {
         generateVector(testVector);
         printVector(testVector);
         selectionSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("insert sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        insertFirst(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("insert sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        insertSecond(testVector);
         printVector(testVector);
         separator();
     }
