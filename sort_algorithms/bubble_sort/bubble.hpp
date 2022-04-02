@@ -13,7 +13,7 @@ void bubble(std::vector<T>& vec) {
 
 template <typename T>
 void bubbleLinear(std::vector<T>& vec) {
-    auto iterator = 0;
+    size_t iterator = 0;
     for (size_t i = 0; i < vec.size(); iterator++) {
         if (iterator == vec.size() - 1) {
             i++;
