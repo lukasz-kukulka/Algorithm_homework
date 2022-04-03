@@ -3,6 +3,7 @@
 #include "selection_sort/selection.hpp"
 #include "insert_sort/insert.hpp"
 #include "bucket_sort/bucket.hpp"
+#include "radix_sort/radix.hpp"
 #include <vector>
 #include <random>
 
@@ -102,6 +103,16 @@ int main() {
         generateVector(testVector);
         printVector(testVector);
         bucketSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("radix sort first");
+        std::vector<int> testVector;
+        generateVector(testVector, 0, 1000, 10);
+        printVector(testVector);
+        radixFirst(testVector);
         printVector(testVector);
         separator();
     }
