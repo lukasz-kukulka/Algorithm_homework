@@ -1,6 +1,7 @@
 #include <chrono>
 #include <functional>
 #include <map>
+#include <random>
 #include <string>
 #include <vector>
 
@@ -35,3 +36,16 @@ std::map<std::string, std::function<void(std::vector<int>)>>fun {
     {"selection sort first", [](std::vector<int>vec){ selectionFirst(vec); }},
     {"selection sort second", [](std::vector<int>vec){ selectionSecond(vec); }}
 };
+
+template<typename T>
+std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxValue = 100, int size = 12) {
+    vec.clear();
+    vec.reserve(size);
+    std::random_device seed;
+    std::mt19937 randomNumber{seed()}; 
+    std::uniform_int_distribution<int> range(minValue, maxValue);
+    for (size_t i = 0; i < vec.capacity(); i++) {
+        vec.push_back(range(randomNumber));
+    }
+    return vec;
+}

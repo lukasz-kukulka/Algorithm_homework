@@ -10,34 +10,34 @@
 #include <vector>
 #include <random>
 
-template<typename T>
-std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxValue = 100, int size = 12) {
-    vec.clear();
-    vec.reserve(size);
-    std::random_device seed;
-    std::mt19937 randomNumber{seed()}; 
-    std::uniform_int_distribution<int> range(minValue, maxValue);
-    for (size_t i = 0; i < vec.capacity(); i++) {
-        vec.push_back(range(randomNumber));
-    }
-    return vec;
-}
+// template<typename T>
+// std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxValue = 100, int size = 12) {
+//     vec.clear();
+//     vec.reserve(size);
+//     std::random_device seed;
+//     std::mt19937 randomNumber{seed()}; 
+//     std::uniform_int_distribution<int> range(minValue, maxValue);
+//     for (size_t i = 0; i < vec.capacity(); i++) {
+//         vec.push_back(range(randomNumber));
+//     }
+//     return vec;
+// }
 
-template<typename T>
-void printVector(std::vector<T>& vec) {
-    for (const auto & ele : vec) {
-        std::cout << ele << " ";
-    }
-    std::cout << '\n';
-}
+// template<typename T>
+// void printVector(std::vector<T>& vec) {
+//     for (const auto & ele : vec) {
+//         std::cout << ele << " ";
+//     }
+//     std::cout << '\n';
+// }
 
-void separator(std::string name) {
-    std::cout << "-------------------- " << name << " -------------------------\n";
-}
+// void separator(std::string name) {
+//     std::cout << "-------------------- " << name << " -------------------------\n";
+// }
 
-void separator() {
-    std::cout << "----------------------------------------------------------\n\n";
-}
+// void separator() {
+//     std::cout << "----------------------------------------------------------\n\n";
+// }
 
 int main() {
     // {
@@ -159,6 +159,8 @@ int main() {
     //     printVector(testVector);
     //     separator();
     // }
+
+
 
     return 0;
 }
