@@ -3,10 +3,10 @@
 
 template <typename T>
 void selectionFirst(std::vector<T>& vec) {
-    int tempValue { };
-    for (int i = 0; i < vec.size(); i++) {
+    size_t tempValue { };
+    for (size_t i = 0; i < vec.size(); i++) {
         tempValue = i;
-        for (int j = i; j < vec.size() - 1; j++) {
+        for (size_t j = i; j < vec.size() - 1; j++) {
             if (vec[tempValue] > vec[j + 1]) {
                 tempValue = j + 1;
             }

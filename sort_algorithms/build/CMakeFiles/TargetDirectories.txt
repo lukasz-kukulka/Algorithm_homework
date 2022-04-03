@@ -1,0 +1,4 @@
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/build/CMakeFiles/SORTS.dir
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/build/CMakeFiles/SORTS-opt.dir
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/build/CMakeFiles/edit_cache.dir
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/sort_algorithms/build/CMakeFiles/rebuild_cache.dir

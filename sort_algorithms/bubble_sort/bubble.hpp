@@ -2,8 +2,8 @@
 
 template <typename T>
 void bubble(std::vector<T>& vec) { 
-    for (int i = 0; i < vec.size(); i++) {
-        for (int j = 0; j < vec.size() - 1; j++) {
+    for (size_t i = 0; i < vec.size(); i++) {
+        for (size_t j = 0; j < vec.size() - 1; j++) {
             if (vec[j] > vec[j + 1]) {
                 std::swap(vec[j], vec[j + 1]);
             }
@@ -14,7 +14,7 @@ void bubble(std::vector<T>& vec) {
 template <typename T>
 void bubbleLinear(std::vector<T>& vec) {
     auto iterator = 0;
-    for (int i = 0; i < vec.size(); iterator++) {
+    for (size_t i = 0; i < vec.size(); iterator++) {
         if (iterator == vec.size() - 1) {
             i++;
             iterator = 0;

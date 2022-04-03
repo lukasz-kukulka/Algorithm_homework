@@ -2,6 +2,7 @@
 #include "bubble_sort/bubble.hpp"
 #include "selection_sort/selection.hpp"
 #include "insert_sort/insert.hpp"
+#include "bucket_sort/bucket.hpp"
 #include <vector>
 #include <random>
 
@@ -12,7 +13,7 @@ std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxV
     std::random_device seed;
     std::mt19937 randomNumber{seed()}; 
     std::uniform_int_distribution<int> range(minValue, maxValue);
-    for (int i = 0; i < vec.capacity(); i++) {
+    for (size_t i = 0; i < vec.capacity(); i++) {
         vec.push_back(range(randomNumber));
     }
     return vec;
@@ -81,6 +82,26 @@ int main() {
         generateVector(testVector);
         printVector(testVector);
         insertSecond(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("bucket sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        bucketFirst(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("bucket sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        bucketSecond(testVector);
         printVector(testVector);
         separator();
     }
