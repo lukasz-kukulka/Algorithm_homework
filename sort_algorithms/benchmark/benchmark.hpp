@@ -15,26 +15,26 @@
 
 constexpr auto repetitions = 10;
 
-std::map<std::string, std::function<void(std::vector<int>)>>fun {
-    {"bubble sort first", [](std::vector<int>vec){ bubble(vec); }},
-    {"bubble sort second", [](std::vector<int>vec){ bubbleLinear(vec); }},
+std::map<std::pair<std::string, float>, std::function<void(std::vector<int>)>>fun {
+    {"bubble sort first", 0, [](std::vector<int>vec){ bubble(vec); }},
+    {"bubble sort second", 0, [](std::vector<int>vec){ bubbleLinear(vec); }},
 
-    {"bucket sort first", [](std::vector<int>vec){ bucketFirst(vec); }},
-    {"bucket sort second", [](std::vector<int>vec){ bucketSecond(vec); }},
+    {"bucket sort first", 0, [](std::vector<int>vec){ bucketFirst(vec); }},
+    {"bucket sort second", 0, [](std::vector<int>vec){ bucketSecond(vec); }},
 
-    {"insert sort first", [](std::vector<int>vec){ insertFirst(vec); }},
-    {"insert sort second", [](std::vector<int>vec){ insertSecond(vec); }},
+    {"insert sort first", 0, [](std::vector<int>vec){ insertFirst(vec); }},
+    {"insert sort second", 0, [](std::vector<int>vec){ insertSecond(vec); }},
 
-    {"merge sort first", [](std::vector<int>vec){ mergeFirst(vec, 0, static_cast<int>(vec.size() - 1)); }},
-    {"merge sort second", [](std::vector<int>vec){ mergeSecond(vec.begin(), vec.end() - 1); }},
+    {"merge sort first", 0, [](std::vector<int>vec){ mergeFirst(vec, 0, static_cast<int>(vec.size() - 1)); }},
+    {"merge sort second", 0, [](std::vector<int>vec){ mergeSecond(vec.begin(), vec.end() - 1); }},
 
-    {"quick sort first", [](std::vector<int>vec){ quickFirst(vec, 0, static_cast<int>(vec.size() - 1)); }},
-    {"quick sort second", [](std::vector<int>vec){ quickSecond(vec.begin(), vec.end() - 1); }},
+    {"quick sort first", 0, [](std::vector<int>vec){ quickFirst(vec, 0, static_cast<int>(vec.size() - 1)); }},
+    {"quick sort second", 0, [](std::vector<int>vec){ quickSecond(vec.begin(), vec.end() - 1); }},
 
-    {"radix sort first", [](std::vector<int>vec){ radixFirst(vec); }},
+    {"radix sort first", 0, [](std::vector<int>vec){ radixFirst(vec); }},
 
-    {"selection sort first", [](std::vector<int>vec){ selectionFirst(vec); }},
-    {"selection sort second", [](std::vector<int>vec){ selectionSecond(vec); }}
+    {"selection sort first", 0, [](std::vector<int>vec){ selectionFirst(vec); }},
+    {"selection sort second", 0, [](std::vector<int>vec){ selectionSecond(vec); }}
 };
 
 template<typename T>
@@ -48,4 +48,19 @@ std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxV
         vec.push_back(range(randomNumber));
     }
     return vec;
+}
+
+void timeCheck(int min, int max, int size) {
+    std::vector<int>testVector;
+    for (auto i = 0; i < repetitions; i++) {
+        generateVector(testVector, min, max, size);
+        for (auto & function : fun) {
+            auto start = std::chrono::high_resolution_clock::now();
+            function.second(testVector);
+            auto stop = std::chrono::high_resolution_clock::now();
+            function.first.second += std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count(); 
+        }
+
+    }
+
 }
