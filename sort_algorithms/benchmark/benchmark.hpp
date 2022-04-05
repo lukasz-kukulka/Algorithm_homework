@@ -15,26 +15,26 @@
 
 constexpr auto repetitions = 10;
 
-std::map<std::pair<std::string, float>, std::function<void(std::vector<int>)>>fun {
-    {"bubble sort first", 0, [](std::vector<int>vec){ bubble(vec); }},
-    {"bubble sort second", 0, [](std::vector<int>vec){ bubbleLinear(vec); }},
+std::map<std::string, std::pair<std::function<void(std::vector<int>)>, size_t>> fun {
+    { "bubble sort first", std::make_pair([](std::vector<int>vec){ bubble(vec); }, 0) },
+    { "bubble sort second", std::make_pair([](std::vector<int>vec){ bubbleLinear(vec); }, 0) },
 
-    {"bucket sort first", 0, [](std::vector<int>vec){ bucketFirst(vec); }},
-    {"bucket sort second", 0, [](std::vector<int>vec){ bucketSecond(vec); }},
+    { "bucket sort first", std::make_pair([](std::vector<int>vec){ bucketFirst(vec); }, 0) },
+    { "bucket sort second", std::make_pair([](std::vector<int>vec){ bucketSecond(vec); }, 0) },
 
-    {"insert sort first", 0, [](std::vector<int>vec){ insertFirst(vec); }},
-    {"insert sort second", 0, [](std::vector<int>vec){ insertSecond(vec); }},
+    { "insert sort first", std::make_pair([](std::vector<int>vec){ insertFirst(vec); }, 0) },
+    { "insert sort second", std::make_pair([](std::vector<int>vec){ insertSecond(vec); }, 0) },
 
-    {"merge sort first", 0, [](std::vector<int>vec){ mergeFirst(vec, 0, static_cast<int>(vec.size() - 1)); }},
-    {"merge sort second", 0, [](std::vector<int>vec){ mergeSecond(vec.begin(), vec.end() - 1); }},
+    { "merge sort first", std::make_pair([](std::vector<int>vec){ mergeFirst(vec, 0, static_cast<int>(vec.size() - 1)); }, 0) },
+    { "merge sort second", std::make_pair([](std::vector<int>vec){ mergeSecond(vec.begin(), vec.end() - 1); }, 0) },
 
-    {"quick sort first", 0, [](std::vector<int>vec){ quickFirst(vec, 0, static_cast<int>(vec.size() - 1)); }},
-    {"quick sort second", 0, [](std::vector<int>vec){ quickSecond(vec.begin(), vec.end() - 1); }},
+    { "quick sort first", std::make_pair([](std::vector<int>vec){ quickFirst(vec, 0, static_cast<int>(vec.size() - 1)); }, 0) },
+    { "quick sort second", std::make_pair([](std::vector<int>vec){ quickSecond(vec.begin(), vec.end() - 1); }, 0) },
 
-    {"radix sort first", 0, [](std::vector<int>vec){ radixFirst(vec); }},
+    { "radix sort first", std::make_pair([](std::vector<int>vec){ radixFirst(vec); }, 0) },
 
-    {"selection sort first", 0, [](std::vector<int>vec){ selectionFirst(vec); }},
-    {"selection sort second", 0, [](std::vector<int>vec){ selectionSecond(vec); }}
+    { "selection sort first", std::make_pair([](std::vector<int>vec){ selectionFirst(vec); }, 0) },
+    { "selection sort second", std::make_pair([](std::vector<int>vec){ selectionSecond(vec); }, 0) }
 };
 
 template<typename T>
@@ -56,9 +56,9 @@ void timeCheck(int min, int max, int size) {
         generateVector(testVector, min, max, size);
         for (auto & function : fun) {
             auto start = std::chrono::high_resolution_clock::now();
-            function.second(testVector);
+            function.second.first(testVector);
             auto stop = std::chrono::high_resolution_clock::now();
-            function.first.second += std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count(); 
+            function.second.second += std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count(); 
         }
 
     }
