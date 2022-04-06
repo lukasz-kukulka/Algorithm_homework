@@ -60,7 +60,12 @@ void timeCheck(int min, int max, int size) {
             auto stop = std::chrono::high_resolution_clock::now();
             function.second.second += std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count(); 
         }
-
     }
+}
 
+void printResult() {
+    for (const auto & print : fun) {
+        std::cout << print.first << ": avarage time = " << print.second.second / repetitions << '\n';
+    }
+    std::cout << std::endl;
 }

@@ -40,6 +40,48 @@
 // }
 
 int main() {
+    auto min { 0 };
+    auto max { 10'000'000 };
+    auto size { 2500 };
+    std::cout << "CHECKIN VECTOR SORT TIME FOR " << size << " ELEMENTS, WITH VALUE BETWEEN " << min << " AND " << max << '\n';
+    timeCheck(min, max, size);
+    printResult();
+
+
+    min = 0;
+    max = 1'000'000;
+    size = 2500;
+    std::cout << "CHECKIN VECTOR SORT TIME FOR " << size << " ELEMENTS, WITH VALUE BETWEEN " << min << " AND " << max << '\n';
+    timeCheck(min, max, size);
+    printResult();
+
+    min = 0;
+    max = 100'000;
+    size = 2500;
+    std::cout << "CHECKIN VECTOR SORT TIME FOR " << size << " ELEMENTS, WITH VALUE BETWEEN " << min << " AND " << max << '\n';
+    timeCheck(min, max, size);
+    printResult();
+
+    min = 0;
+    max = 10'000;
+    size = 2500;
+    std::cout << "CHECKIN VECTOR SORT TIME FOR " << size << " ELEMENTS, WITH VALUE BETWEEN " << min << " AND " << max << '\n';
+    timeCheck(min, max, size);
+    printResult();
+
+    min = 0;
+    max = 1'000;
+    size = 2500;
+    std::cout << "CHECKIN VECTOR SORT TIME FOR " << size << " ELEMENTS, WITH VALUE BETWEEN " << min << " AND " << max << '\n';
+    timeCheck(min, max, size);
+    printResult();
+
+    min = 0;
+    max = 100;
+    size = 2500;
+    std::cout << "CHECKIN VECTOR SORT TIME FOR " << size << " ELEMENTS, WITH VALUE BETWEEN " << min << " AND " << max << '\n';
+    timeCheck(min, max, size);
+    printResult();
     // {
     //     separator("bubble sort");
     //     std::vector<int> testVector;
