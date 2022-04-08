@@ -70,7 +70,17 @@ int main() {
         std::vector<int> testVector;
         generateVector(testVector);
         printVector(testVector);
-        insert(testVector);
+        insertFirst(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("insert sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        insertSecond(testVector);
         printVector(testVector);
         separator();
     }
