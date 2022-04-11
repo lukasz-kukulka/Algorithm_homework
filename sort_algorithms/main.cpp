@@ -4,11 +4,12 @@
 #include "insert_sort/insert.hpp"
 #include "bucket_sort/bucket.hpp"
 #include "radix_sort/radix.hpp"
+#include "merge_sort/merge.hpp"
 #include <vector>
 #include <random>
 
 template<typename T>
-std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxValue = 100, int size = 25) {
+std::vector<T> generateVector(std::vector<T>& vec, int minValue = -100, int maxValue = 100, int size = 12) {
     vec.clear();
     vec.reserve(size);
     std::random_device seed;
@@ -113,6 +114,26 @@ int main() {
         generateVector(testVector, 0, 1000, 10);
         printVector(testVector);
         radixFirst(testVector);
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("merge sort first");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        mergeFirst(testVector, 0, static_cast<int>(testVector.size() - 1));
+        printVector(testVector);
+        separator();
+    }
+
+    {
+        separator("merge sort second");
+        std::vector<int> testVector;
+        generateVector(testVector);
+        printVector(testVector);
+        mergeSecond(testVector.begin(), testVector.end() - 1);
         printVector(testVector);
         separator();
     }

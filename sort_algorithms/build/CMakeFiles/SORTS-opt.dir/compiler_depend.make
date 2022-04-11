@@ -254,6 +254,7 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../radix_sort/radix.hpp \
+  ../merge_sort/merge.hpp \
   /usr/include/c++/11/random \
   /usr/include/c++/11/bits/random.h \
   /usr/include/c++/11/x86_64-redhat-linux/bits/opt_random.h \
@@ -269,6 +270,8 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bit:
 
 /usr/include/c++/11/numeric:
+
+/usr/include/c++/11/bits/random.tcc:
 
 /usr/include/stdlib.h:
 
@@ -528,8 +531,6 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
-/usr/include/c++/11/bits/random.tcc:
-
 /usr/include/c++/11/tr1/gamma.tcc:
 
 /usr/include/bits/types/__locale_t.h:
@@ -749,6 +750,8 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 ../bucket_sort/bucket.hpp:
 
 /usr/include/math.h:
+
+../merge_sort/merge.hpp:
 
 /usr/include/bits/math-vector.h:
 
