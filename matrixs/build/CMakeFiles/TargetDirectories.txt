@@ -1,0 +1,3 @@
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrixs/build/CMakeFiles/MATRIX.dir
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrixs/build/CMakeFiles/edit_cache.dir
+/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrixs/build/CMakeFiles/rebuild_cache.dir
