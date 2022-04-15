@@ -47,18 +47,25 @@ void printSpiral(const Matrix& matrix, std::ostream& os = std::cout) {
 }
 
 void printSpiralLukasz(const Matrix& matrix, std::ostream& os = std::cout) {
-    constexpr const std::array<int, 4> moves_y{0, -1, 0, 1};
-    constexpr const std::array<int, 4> moves_x{-1, 0, 1, 0};
-    const int size = static_cast<int>(matrix.size());
+    constexpr const std::array<int, 6> moves_y{0, -1,-1, 0, 1};
+    constexpr const std::array<int, 6> moves_x{-1, 0, 0, 1, 0};
+
+    int size = static_cast<int>(matrix.size());
     Matrix tmp(size, std::vector<int>(size));
     int y = 2;
     int x = 3;
     int index_x = size - 1;
     int index_y = size * size - 1;
+    int steps {};
     int reverser_x{};
     int reverser_y{};
     for (int i = 0; i < (size * 2) - 1; ++i) {
-        auto const current = i % 4;
+        steps++;
+        if (steps == 3){
+            x = 1;
+            y = 2;
+        }
+        auto const current = i % 5;
         int max_index = (size * 2 - i) / 2;
         for (int j = 0; j < max_index; ++j) {
             x += moves_x[current];
@@ -70,6 +77,7 @@ void printSpiralLukasz(const Matrix& matrix, std::ostream& os = std::cout) {
             reverser_y++;
         }
     }
+
     print2D(tmp, os);
 }
 
