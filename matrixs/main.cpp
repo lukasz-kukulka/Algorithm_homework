@@ -81,12 +81,21 @@ void printSpiralLukasz(const Matrix& matrix, std::ostream& os = std::cout) {
     print2D(tmp, os);
 }
 
+void resetMatrixWithZeroValueLukasz(Matrix& matrix, std::ostream& os = std::cout) {
+    
+}
+
 int main() {
     printSpiral({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
     std::cout << '\n';
     printSpiralLukasz({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
     std::cout << '\n';
-    
+    resetMatrixWithZeroValueLukasz {{ 1, 1, 1, 1, 0, },
+                                    { 1, 0, 1, 1, 1, },
+                                    { 1, 1, 1, 1, 1, },
+                                    { 1, 1, 1, 1, 1, },
+                                    { 0, 1, 1, 1, 1, }});
+    std::cout << '\n';
     // printSpiral({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}});
     // std::cout << '\n';
 }
