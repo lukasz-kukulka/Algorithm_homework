@@ -6,50 +6,29 @@
 #include <iostream>
 #include <algorithm>
 
+struct Point {
+    size_t x{};
+    size_t y{};
+};
+
 using Matrix = std::vector<std::vector<int>>;
 
 template <typename T>
-void print(const T& c, std::ostream& os = std::cout) {
+void print( T& c, std::ostream& os = std::cout) {
     std::copy(std::cbegin(c), std::cend(c), std::ostream_iterator<typename T::value_type>(os, " "));
     os << '\n';
 }
 
 template <typename T>
-void print2D(const T& c, std::ostream& os = std::cout) {
-    std::for_each(cbegin(c), cend(c), [&os](const auto& el) {
+void print2D( T& c, std::ostream& os = std::cout) {
+    std::for_each(cbegin(c), cend(c), [&os](auto& el) {
         print(el, os);
     });
 }
 
-void printSpiral(const Matrix& matrix, std::ostream& os = std::cout) {
-    constexpr const std::array<int, 4> moves_y{1, 0, -1, 0};
-    constexpr const std::array<int, 4> moves_x{0, 1, 0, -1};
-    const int size = static_cast<int>(matrix.size());
-    Matrix tmp(size, std::vector<int>(size));
-    int y = -1;
-    int x = 0;
-    int index_x = 0;
-    int index_y = 0;
-    for (int i = 0; i < (size * 2) - 1; ++i) {
-        auto current = i % 4;
-        for (int j = 0; j < (size * 2 - i) / 2; ++j) {
-            x += moves_x[current];
-            y += moves_y[current];
-            tmp[x][y] = matrix[index_x][index_y];
-            index_y = (index_y + 1) % size;
-            if (!index_y) {
-                index_x = (index_x + 1) % size;
-            }
-        }
-    }
-
-    print2D(tmp, os);
-}
-
-void printSpiralLukasz(const Matrix& matrix, std::ostream& os = std::cout) {
+void printSpiralLukasz(Matrix& matrix, std::ostream& os = std::cout) {
     constexpr const std::array<int, 6> moves_y{0, -1,-1, 0, 1};
     constexpr const std::array<int, 6> moves_x{-1, 0, 0, 1, 0};
-
     int size = static_cast<int>(matrix.size());
     Matrix tmp(size, std::vector<int>(size));
     int y = 2;
@@ -81,21 +60,44 @@ void printSpiralLukasz(const Matrix& matrix, std::ostream& os = std::cout) {
     print2D(tmp, os);
 }
 
-void resetMatrixWithZeroValueLukasz(Matrix& matrix, std::ostream& os = std::cout) {
-    
+void resetMatrixWithZeroValueLukasz( Matrix& matrix, std::ostream& os = std::cout) 
+{
+    std::vector<Point> zeroPointVec; 
+    for (size_t i{}; i < matrix.size(); ++i) {
+        for (size_t j{}; j < matrix.begin()->size(); ++j) {
+            if (matrix[i][j] == 0) {
+                zeroPointVec.push_back( { i, j } );
+            }
+        }
+    }
+    for (size_t i{}; i < zeroPointVec.size(); ++i) {
+        auto const row = zeroPointVec[i].x;
+        auto const col = zeroPointVec[i].y;
+        for (size_t j{}; j < matrix.size(); ++j) {
+            matrix[row][j] = 0;
+            matrix[j][col] = 0;
+        }
+    }
+    print2D(matrix, os);
 }
 
 int main() {
-    printSpiral({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
+    Matrix matrixFirst ={ {1, 2, 3}, 
+                          {4, 5, 6}, 
+                          {7, 8, 9} };
+    printSpiralLukasz( matrixFirst );
     std::cout << '\n';
-    printSpiralLukasz({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
+
+    Matrix matrixSecond = {  { 1, 1, 1, 1, 0 },
+                             { 1, 0, 1, 1, 1 },
+                             { 1, 1, 1, 1, 1 },
+                             { 1, 1, 1, 1, 1 },
+                             { 0, 1, 1, 1, 1 } };
+    print2D(matrixSecond, std::cout);
     std::cout << '\n';
-    resetMatrixWithZeroValueLukasz {{ 1, 1, 1, 1, 0, },
-                                    { 1, 0, 1, 1, 1, },
-                                    { 1, 1, 1, 1, 1, },
-                                    { 1, 1, 1, 1, 1, },
-                                    { 0, 1, 1, 1, 1, }});
+    resetMatrixWithZeroValueLukasz ( matrixSecond );
     std::cout << '\n';
+    
     // printSpiral({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}});
     // std::cout << '\n';
 }
