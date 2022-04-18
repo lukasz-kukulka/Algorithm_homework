@@ -81,6 +81,12 @@ void resetMatrixWithZeroValueLukasz( Matrix& matrix, std::ostream& os = std::cou
     print2D(matrix, os);
 }
 
+void countValueInMatrixLukasz( Matrix& matrix, std::ostream& os = std::cout) {
+
+
+    print2D(matrix, os);
+}
+
 int main() {
     Matrix matrixFirst ={ {1, 2, 3}, 
                           {4, 5, 6}, 
@@ -97,7 +103,16 @@ int main() {
     std::cout << '\n';
     resetMatrixWithZeroValueLukasz ( matrixSecond );
     std::cout << '\n';
-    
+
+    Matrix matrixThird = {  {-5, -2, -1, 3,  4}, 
+                            {-3, -2, -1, 4,  6},
+                            {-2, -1,  0, 5,  8}, 
+                            {-1,  3,  6, 10, 12}, 
+                            { 5,  8, 10, 13, 15} };
+    print2D(matrixSecond, std::cout);
+    std::cout << '\n';
+    countValueInMatrixLukasz ( matrixSecond );
+    std::cout << '\n';
     // printSpiral({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}});
     // std::cout << '\n';
 }
