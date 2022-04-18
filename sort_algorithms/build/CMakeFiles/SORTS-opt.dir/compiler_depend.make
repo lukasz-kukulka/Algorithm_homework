@@ -255,6 +255,7 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
   ../radix_sort/radix.hpp \
   ../merge_sort/merge.hpp \
+  ../quick_sort/quick.hpp \
   /usr/include/c++/11/random \
   /usr/include/c++/11/bits/random.h \
   /usr/include/c++/11/x86_64-redhat-linux/bits/opt_random.h \
@@ -272,6 +273,8 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/numeric:
 
 /usr/include/c++/11/bits/random.tcc:
+
+/usr/include/c++/11/x86_64-redhat-linux/bits/opt_random.h:
 
 /usr/include/stdlib.h:
 
@@ -409,8 +412,6 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
-/usr/include/c++/11/x86_64-redhat-linux/bits/opt_random.h:
-
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/c++/11/tr1/special_function_util.h:
@@ -504,8 +505,6 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/c++/11/x86_64-redhat-linux/bits/cpu_defines.h:
-
-/usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
@@ -784,6 +783,10 @@ CMakeFiles/SORTS-opt.dir/main.cpp.o: ../main.cpp \
 /usr/include/bits/types.h:
 
 ../radix_sort/radix.hpp:
+
+/usr/include/c++/11/bits/concept_check.h:
+
+../quick_sort/quick.hpp:
 
 /usr/include/c++/11/random:
 
