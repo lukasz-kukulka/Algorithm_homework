@@ -81,10 +81,21 @@ void resetMatrixWithZeroValueLukasz( Matrix& matrix, std::ostream& os = std::cou
     print2D(matrix, os);
 }
 
-void countValueInMatrixLukasz( Matrix& matrix, std::ostream& os = std::cout) {
-
-
-    print2D(matrix, os);
+void countValueInMatrixLukasz( Matrix& matrix, int number) {
+    int counter = 0;
+    int x = 0;
+    int y = static_cast<int> ( matrix.size() - 1 );
+    while ( x <= static_cast<int> ( matrix.begin()->size() - 1 ) && y >= 0 ) {
+        if ( number == matrix[y][x]) {
+            y--;
+            counter++;
+        } else if ( number < matrix[y][x]) {
+            y--;
+        } else {
+            x++;
+        }
+    }
+    std::cout << "Output for number " << number << ": " << counter;
 }
 
 int main() {
@@ -109,10 +120,12 @@ int main() {
                             {-2, -1,  0, 5,  8}, 
                             {-1,  3,  6, 10, 12}, 
                             { 5,  8, 10, 13, 15} };
-    print2D(matrixSecond, std::cout);
+    print2D(matrixThird, std::cout);
     std::cout << '\n';
-    countValueInMatrixLukasz ( matrixSecond );
+    countValueInMatrixLukasz ( matrixThird, 3 );
     std::cout << '\n';
-    // printSpiral({{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}});
-    // std::cout << '\n';
+    countValueInMatrixLukasz ( matrixThird, 4 );
+    std::cout << '\n';
+    countValueInMatrixLukasz ( matrixThird, -1 );
+    std::cout << '\n';
 }
