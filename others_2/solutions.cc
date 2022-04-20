@@ -56,10 +56,25 @@ std::vector<int> findSubsequence( std::vector<int>const& input_vec )
 
 // - Example input: vec: `{1,2,3,4,5,6}` | order `{2,4,3,5,1,0}`
 // - Example output:  `6 5 1 3 2 4`
-// void sortWithOrder(std::vector<int>& input_vec, std::vector<int> const& order )
-// {
+void sortWithOrder(std::vector<int>& input_vec, std::vector<int>& order )
+{
+    int temp_num{};
+    int iterator{};
+    int current_order_index{};
+    while ( iterator < order.size() )
+    {
+        if ( iterator == current_order_index || order[ iterator ] == -1 )
+        {
+            current_order_index++;
+            iterator++;
+        }
+        temp_num = input_vec[ order[current_order_index] ];
+        input_vec[ order[current_order_index] ] = input_vec[ current_order_index ];
+        current_order_index = order[current_order_index];
+        order[current_order_index] = -1;
+    }
 
-// }
+}
 
 void printVec( std::vector<int> const& vec )
 {
