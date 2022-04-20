@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Project-hw.dir/main.cc.o -o Project-hw  -lsolutions 
