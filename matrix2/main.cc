@@ -1,6 +1,11 @@
 #include <string>
 #include <vector>
 
+struct Point {
+    size_t x{};
+    size_t y{};
+};
+
 using Matrix = std::vector<std::vector<int>>;
 
 Matrix second = {{'D', 'E', 'H', 'X', 'B'},
