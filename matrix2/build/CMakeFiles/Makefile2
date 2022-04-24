@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrix
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Project-hw.dir/all
+all: CMakeFiles/MATRIX_TWO.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Project-hw.dir/clean
+clean: CMakeFiles/MATRIX_TWO.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Project-hw.dir
+# Target rules for target CMakeFiles/MATRIX_TWO.dir
 
 # All Build rule for target.
-CMakeFiles/Project-hw.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-hw.dir/build.make CMakeFiles/Project-hw.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-hw.dir/build.make CMakeFiles/Project-hw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrix2/build/CMakeFiles --progress-num=1,2 "Built target Project-hw"
-.PHONY : CMakeFiles/Project-hw.dir/all
+CMakeFiles/MATRIX_TWO.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MATRIX_TWO.dir/build.make CMakeFiles/MATRIX_TWO.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MATRIX_TWO.dir/build.make CMakeFiles/MATRIX_TWO.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrix2/build/CMakeFiles --progress-num=1,2 "Built target MATRIX_TWO"
+.PHONY : CMakeFiles/MATRIX_TWO.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Project-hw.dir/rule: cmake_check_build_system
+CMakeFiles/MATRIX_TWO.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrix2/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Project-hw.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MATRIX_TWO.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lukasz_k/Dokumenty/Programing/Algorithm_homework/matrix2/build/CMakeFiles 0
-.PHONY : CMakeFiles/Project-hw.dir/rule
+.PHONY : CMakeFiles/MATRIX_TWO.dir/rule
 
 # Convenience name for target.
-Project-hw: CMakeFiles/Project-hw.dir/rule
-.PHONY : Project-hw
+MATRIX_TWO: CMakeFiles/MATRIX_TWO.dir/rule
+.PHONY : MATRIX_TWO
 
 # clean rule for target.
-CMakeFiles/Project-hw.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-hw.dir/build.make CMakeFiles/Project-hw.dir/clean
-.PHONY : CMakeFiles/Project-hw.dir/clean
+CMakeFiles/MATRIX_TWO.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MATRIX_TWO.dir/build.make CMakeFiles/MATRIX_TWO.dir/clean
+.PHONY : CMakeFiles/MATRIX_TWO.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

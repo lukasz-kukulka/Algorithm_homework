@@ -8,6 +8,13 @@ struct Point {
 
 using Matrix = std::vector<std::vector<int>>;
 
+// Matrix taskOneMatrix{ {-1, 0, -1, -1, -1, 0, 0 }, 
+//                       {1, -1, -1, -1, 1 ,0, 0 },
+//                       {-1, 0, -1, 0, -1, -1, -1 }, 
+//                       {-1, -1, 1, -1 -1, -1, -1 }, 
+//                       { -1, -1, 0, -1, -1, -1, 0 }, 
+//                       { 0, 0, -1, -1, 1, 0, 0} };
+
 Matrix second = {{'D', 'E', 'H', 'X', 'B'},
                  {'A', 'O', 'G', 'P', 'E'},
                  {'D', 'D', 'C', 'F', 'D'},
@@ -15,13 +22,13 @@ Matrix second = {{'D', 'E', 'H', 'X', 'B'},
                  {'C', 'D', 'Y', 'E', 'N'}};
 
 int countMovesColour(Matrix matrix) {
-    
-    return 0;
+
+    return static_cast<int>(matrix.size());
 }
 
 std::string theLongestSequence ( Matrix const & matrix ) {
-
-    return "TEST";
+    
+    return std::to_string( matrix.size()) + "TEST";
 }
 
 int main() {
