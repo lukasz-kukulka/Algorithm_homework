@@ -1,4 +1,5 @@
 #include <array>
+#include <algorithm>
 #include <iostream>
 #include <map>
 #include <string>
@@ -92,10 +93,42 @@ int countMovesColour(Matrix & matrix) {
     return count_moves;
 }
 
-std::string theLongestSequence ( Matrix const & matrix ) {
-    
-    return std::to_string( matrix.size()) + "TEST";
+bool outOfRange ( Matrix const & matrix, Point const & point)
+{
+    if ( point.x < 0 || point.y < 0 || point.x >= static_cast<int>(matrix.size()) || point.y >= static_cast<int>(matrix.front().size()) )
+    {
+        return false;
+    }
+    return true;
+
 }
+
+int theLongestSequenceOnePoint ( Matrix const & matrix, Point point, char ch )
+{
+    constexpr int moves = 8;
+    constexpr const std::array<int, moves> x_moves{-1, -1, -1, 0, 0, 1, 1, 1};
+    constexpr const std::array<int, moves> y_moves{-1, 0, 1, 1, -1, -1, 0, 1};
+
+    
+    return x_moves[0] + y_moves[0] + matrix[0][0] + point.x + ch;
+
+}
+
+int theLongestSequence ( Matrix const & matrix ) {
+    int max_sequence{};
+
+    for ( int x{}; x < static_cast < int > ( matrix.size() ); ++x )
+    {
+        for ( int y{}; y < static_cast < int > ( matrix.size() ); ++y )
+        {
+            max_sequence = std::max( max_sequence, theLongestSequenceOnePoint(matrix, Point{x, y}, '0' ) );
+        }
+    }
+
+    return max_sequence;
+}
+
+
 
 int main() {
     printMatrix(taskOneMatrix);
