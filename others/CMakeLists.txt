@@ -5,8 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(OTHERS)
 
-add_executable(${PROJECT_NAME} main.cc)
-target_link_libraries(${PROJECT_NAME}-hw solutions)
+add_executable(${PROJECT_NAME} main.cc solutions.cc)
 
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Werror -pedantic -Wconversion -O3)
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
