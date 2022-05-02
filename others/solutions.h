@@ -12,7 +12,13 @@ namespace Homework{
     } // namespace TaskOne
 
     namespace TaskTwo {
+        struct FrequencyData {
+            int value{};
+            int number{};
+        }
 
+        std::vector< int > inputVec {1,1,1,1,2,2,2,3,3,4,5,5,5};
+        std::vector< FrequencyData > countFrequency( std::vector< int > input_vec);
     } // namespace TaskTwo
 
     namespace TaskThree {
