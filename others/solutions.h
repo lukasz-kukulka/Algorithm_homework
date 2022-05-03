@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <iterator>
 
 namespace Homework{
 
@@ -22,8 +23,16 @@ namespace Homework{
     } // namespace TaskTwo
 
     namespace TaskThree {
+        std::iterator<int> greater_value_begin{};;
+        std::vector< int > inputVec {2,3,1,8,7,10,14,12};
+        std::iterator<int> getBeginHightValue( std::vector< int > input_vec );
 
+        // 3. Chapter 15: Find element matching predicate. You need to find a value for which all values on left are lower and on the right are higher.
+        // - Example input: `2,3,1,8,7,10,14,12`
+        // - Example output: <h>10</h> -> values `2,3,1,8,7` are lower and `14,12` are higher 
 
     } // namespace TaskThree
+
+    
 
 } // namespace Homework
