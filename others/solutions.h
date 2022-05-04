@@ -32,7 +32,7 @@ namespace Homework{
         // - Example output: <h>10</h> -> values `2,3,1,8,7` are lower and `14,12` are higher 
 
     } // namespace TaskThree
-
+    void printResult( std::vector< int > input_vec, std::iterator< int > iterator = nullptr );
     
 
 } // namespace Homework
