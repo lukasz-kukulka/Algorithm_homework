@@ -1,15 +1,9 @@
 #pragma once
 
+#include <vector>
 
-// 1. Chapter 3: Reverse triplet in array. For instance you got data: `1 2 3 4 5 6 7 8 9`, after reverse all triplet you got: `3 2 1 6 5 4 9 8 7`, 
-// so every triplet is beeing reversed. You also need to handle a range which will be reversed <h>begin</h> and <h>end</h>. 
-// - Example input: vec: `1 2 3 4 5 6 7 8 9`, begin: `4` end: <h>7</h>.
-// - Example output: `1 2 3 4 7 6 5 8 9` (we reverse only 3 numbers, because in range 4-7 there is one full triplet).
-//                            b     e
-
-// - Example input2: vec: `1 2 3 4 5 6 7 8 9`, begin: <h>2</h> end: <h>8</h>.
-// - Example output2: `1 2 5 4 3 8 7 6 9` (we reverse 6 numbers, because in range 2-9 there are two full triplets).
-//                         b           e
+std::vector< int > input_vec { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+void tripletReverse(std::vector<int> input_vec, int begin, int end );
 
 // 2. Chapter 6: Find longest subsequence, which contain following numbers from range. A range is a sequence of numbers `0 1 2 3...` 
 // The numbers don't need to be in sorted order, it could be `3 4 5 0 1 2`. Range don't need to start form <h>0</h>, it could be `5 6 7 8 9`.
