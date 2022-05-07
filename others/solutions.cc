@@ -17,7 +17,8 @@
                 {
                     if ( order[i] == vec_to_sort[j] ) 
                     {
-                        std::swap( vec_to_sort[i], vec_to_sort[position_to_swap++] );
+                        std::swap( vec_to_sort[i], vec_to_sort[position_to_swap] );
+                        position_to_swap++;
                         break;
                     }
                 }
@@ -46,4 +47,15 @@
         }
 
 
-    void printResult( std::vector< int > input_vec );
+    void printResult( std::vector< int > input_vec )
+    {
+        std::string line( 80, '_');
+        std::cout << line << '\n';
+        std::cout << '|';
+        for (auto const& vec_element: input_vec )
+        {
+            std::cout << ' ' << vec_element;
+        }
+        std::cout << " |" << '\n';
+
+    }
