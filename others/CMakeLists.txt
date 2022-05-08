@@ -4,12 +4,11 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(solutions)
-target_sources(
-  solutions
-  PRIVATE solutions.cc
-  PUBLIC solutions.h)
+target_sources( solutions PRIVATE solutions.cc )
 
 project(OTHERS)
+
+target_include_directories(solutions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(${PROJECT_NAME} main.cc)
 target_link_libraries(${PROJECT_NAME} solutions)

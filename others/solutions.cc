@@ -3,29 +3,22 @@
 #include <algorithm>
 #include <iostream>
 
-
-        // 1. Chapter 9: Sort element by order presented in second table. In both tables there could be any values. 
-        // You need to focus only on valid values and make sort operation.If there is no value in `order` table you need to sort it at the end of `toSort` vector.
-        // - Example input: `toSort {1,2,3,4,5,6}` `order {4,2,7,8,1}`
-        // - Example output: `{4,2,1,3,5,6}`
-        void sortByOrder( std::vector< int >& vec_to_sort, std::vector< int >const & order) 
+void sortByOrder( std::vector< int >& vec_to_sort, std::vector< int >const & order) 
+{
+    size_t position_to_swap{};
+    for ( size_t i = 0; i < order.size(); ++i )
+    {
+        for ( size_t j = 0; j < vec_to_sort.size(); ++j )
         {
-            size_t position_to_swap{};
-            for ( size_t i = 0; i < order.size(); ++i )
+            if ( order[i] == vec_to_sort[j] ) 
             {
-                for ( size_t j = 0; j < vec_to_sort.size(); ++j )
-                {
-                    if ( order[i] == vec_to_sort[j] ) 
-                    {
-                        std::swap( vec_to_sort[i], vec_to_sort[position_to_swap] );
-                        position_to_swap++;
-                        break;
-                    }
-                }
-
+                std::swap( vec_to_sort[position_to_swap++], vec_to_sort[j] );
+                break;
             }
-            std::sort( vec_to_sort.begin() + position_to_swap, vec_to_sort.end() );
         }
+    }
+    std::sort( vec_to_sort.begin() + position_to_swap, vec_to_sort.end() );
+}
 
         // 2. Chapter 13: Find frequency of each value in sorted vector
         // - Example input: `1,1,1,1,2,2,2,3,3,4,5,5,5`
@@ -47,7 +40,7 @@
         }
 
 
-    void printResult( std::vector< int > input_vec )
+    void printResult( std::vector< int >const & input_vec )
     {
         std::string line( 80, '_');
         std::cout << line << '\n';
