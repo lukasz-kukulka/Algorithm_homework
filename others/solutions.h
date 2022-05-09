@@ -1,7 +1,8 @@
 #pragma once
 
-#include <vector>
 #include <iterator>
+#include <map>
+#include <vector>
 
 void sortByOrder( std::vector< int >& vec_to_sort, std::vector< int >const & order);
 
@@ -10,8 +11,9 @@ struct FrequencyData {
     int number{};
 };
 
-std::vector< FrequencyData > countFrequency( std::vector< int >const & input_vec);
+std::map < int, int >  countFrequency( std::vector< int >const & input_vec);
 
 void getBeginHightValue( std::vector< int >& input_vec );
 
-void printResult( std::vector< int >const & input_vec );    
+void printResult( std::vector< int >const & input_vec );
+void printResult( std::map < int, int > map ); 
