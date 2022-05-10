@@ -33,9 +33,12 @@ std::map < int, int > countFrequency( std::vector< int >const & input_vec)
         // 3. Chapter 15: Find element matching predicate. You need to find a value for which all values on left are lower and on the right are higher.
         // - Example input: `2,3,1,8,7,10,14,12`
         // - Example output: <h>10</h> -> values `2,3,1,8,7` are lower and `14,12` are higher 
-        void getBeginHightValue( std::vector< int >& input_vec )
+        std::tuple<int, std::vector< int >, std::vector < int > >getBeginHightValue( std::vector< int >& input_vec )
         {
-            input_vec[0] = 0;
+            int value;
+            std::vector< int > lower_value;
+            std::vector< int > greater_value;
+            
         }
 
 

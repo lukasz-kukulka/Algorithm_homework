@@ -13,7 +13,7 @@ struct FrequencyData {
 
 std::map < int, int >  countFrequency( std::vector< int >const & input_vec);
 
-void getBeginHightValue( std::vector< int >& input_vec );
+std::tuple<int, std::vector< int >, std::vector< int > > getBeginHightValue( std::vector< int >& input_vec);
 
 void printResult( std::vector< int >const & input_vec );
 void printResult( std::map < int, int > map ); 
