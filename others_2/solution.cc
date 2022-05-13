@@ -12,7 +12,8 @@
 //                         b           e
 void tripletReverse(std::vector<int>& input_vec, const int begin, const int end )
 {
-
+    auto distance = ( end - begin + 1 ) % 3;
+    auto triplet_num = distance / 3;
 }
 
 
