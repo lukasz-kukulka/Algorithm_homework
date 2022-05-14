@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(solutions)
 target_sources( solutions PRIVATE solutions.cc )
 
-project(OTHERS)
+project(OTHERS_two)
 
 target_include_directories(solutions PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
