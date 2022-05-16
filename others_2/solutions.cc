@@ -1,5 +1,6 @@
 #include "solutions.h"
 #include <algorithm>
+#include <iostream>
 
 
 // 1. Chapter 3: Reverse triplet in array. For instance you got data: `1 2 3 4 5 6 7 8 9`, after reverse all triplet you got: `3 2 1 6 5 4 9 8 7`, 
@@ -49,5 +50,10 @@ void sortWithOrder(std::vector<int>& input_vec, std::vector<int> const& order )
 
 void printVec( std::vector<int> const& vec )
 {
-    
+    std::cout << "| ";
+    for ( auto const & element : vec )
+    {
+        std::cout << element << " | "; 
+    }
+    std::cout << '\n';
 }
