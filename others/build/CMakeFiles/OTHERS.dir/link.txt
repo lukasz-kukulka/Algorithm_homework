@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/OTHERS.dir/main.cc.o -o OTHERS  libsolutions.a 
