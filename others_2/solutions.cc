@@ -14,9 +14,9 @@
 //                         b           e
 void tripletReverse(std::vector<int>& input_vec, const int begin, const int end )
 {
-    auto distance = ( end - begin + 1 ) % 3;
-    auto triplet_num = distance / 3;
-    for ( int i{}; i < distance; i + 3)
+    auto distance = ( end - begin );
+    //auto triplet_num = distance / 3;
+    for ( int i{}; i < distance; i = i + 3)
     {
         std::swap( input_vec[ begin + i ], input_vec[ begin + i + 2 ]);
     }
@@ -30,10 +30,10 @@ void tripletReverse(std::vector<int>& input_vec, const int begin, const int end 
 
 // - Example input2: `0 1 2 3 4 6 7 8 9 10 11`
 // - Example output: `6 7 8 9 10 11` (in any order)
-std::vector<int> findSubsequence( std::vector<int> const& input_vec )
-{
+// std::vector<int> findSubsequence( std::vector<int> const& input_vec )
+// {
 
-}
+// }
 
 
 // 3. Chapter 10: Sort a table with given order with memoory complexity <h>O(1)</h>. First table contain numbers and second contain indexes. 
@@ -43,10 +43,10 @@ std::vector<int> findSubsequence( std::vector<int> const& input_vec )
 
 // - Example input: vec: `{1,2,3,4,5,6}` | order `{2,4,3,5,1,0}`
 // - Example output:  `6 5 1 3 2 4`
-void sortWithOrder(std::vector<int>& input_vec, std::vector<int> const& order )
-{
+// void sortWithOrder(std::vector<int>& input_vec, std::vector<int> const& order )
+// {
 
-}
+// }
 
 void printVec( std::vector<int> const& vec )
 {
