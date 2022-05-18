@@ -8,7 +8,7 @@
 // std::vector< int > order { 2, 4, 3, 5, 1, 0 };
 
 void tripletReverse(std::vector<int>& input_vec, const int begin, const int end );
-std::vector<int> findSubsequence( std::vector<int> const& input_vec );
+std::vector<int> findSubsequence( std::vector<int> input_vec );
 void sortWithOrder(std::vector<int>& input_vec, std::vector<int> const& order );
 
 void printVec( std::vector<int> const& vec );

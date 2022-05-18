@@ -9,5 +9,10 @@ int main() {
         tripletReverse(taskOneVec, begin_order, end_order );
         printVec(taskOneVec);
     }
+
+    {
+        std::vector< int > taskTwoVec{ 1, 2, 3, 5, 6, 7, 8, 9 };
+        findSubsequence( taskTwoVec );
+    }
     
 }

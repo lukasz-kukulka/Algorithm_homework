@@ -207,12 +207,32 @@ CMakeFiles/solutions.dir/solutions.cc.o: ../solutions.cc \
   /usr/include/c++/12/bits/basic_ios.tcc \
   /usr/include/c++/12/bits/ostream.tcc \
   /usr/include/c++/12/istream \
-  /usr/include/c++/12/bits/istream.tcc
+  /usr/include/c++/12/bits/istream.tcc \
+  /usr/include/c++/12/ranges \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/optional \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/span \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/tuple \
+  /usr/include/c++/12/bits/uses_allocator.h
 
+
+/usr/include/c++/12/array:
+
+/usr/include/c++/12/bits/enable_special_members.h:
+
+/usr/include/c++/12/bits/stream_iterator.h:
+
+/usr/include/c++/12/iterator:
 
 /usr/include/c++/12/bits/basic_ios.tcc:
 
 /usr/include/c++/12/cwctype:
+
+/usr/include/c++/12/tuple:
 
 /usr/include/c++/12/bits/ostream.tcc:
 
@@ -354,6 +374,8 @@ CMakeFiles/solutions.dir/solutions.cc.o: ../solutions.cc \
 
 /usr/include/c++/12/algorithm:
 
+/usr/include/c++/12/ranges:
+
 /usr/include/c++/12/bits/string_view.tcc:
 
 /usr/include/stdlib.h:
@@ -408,6 +430,8 @@ CMakeFiles/solutions.dir/solutions.cc.o: ../solutions.cc \
 
 /usr/include/bits/endian.h:
 
+/usr/include/c++/12/cstddef:
+
 /usr/include/c++/12/concepts:
 
 /usr/include/c++/12/bits/new_allocator.h:
@@ -423,6 +447,8 @@ CMakeFiles/solutions.dir/solutions.cc.o: ../solutions.cc \
 /usr/include/bits/typesizes.h:
 
 /usr/include/bits/uintn-identity.h:
+
+/usr/include/c++/12/optional:
 
 /usr/include/c++/12/bits/allocator.h:
 
@@ -451,6 +477,10 @@ CMakeFiles/solutions.dir/solutions.cc.o: ../solutions.cc \
 /usr/include/c++/12/x86_64-redhat-linux/bits/cpu_defines.h:
 
 /usr/include/c++/12/bits/exception_defines.h:
+
+/usr/include/c++/12/bits/uses_allocator.h:
+
+/usr/include/c++/12/span:
 
 /usr/include/sys/cdefs.h:
 
