@@ -1,4 +1,4 @@
-# Install script for directory: /run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2
+# Install script for directory: /data/Programing/Algorithm_homework/others_2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/data/Programing/Algorithm_homework/others_2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

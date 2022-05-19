@@ -1,4 +1,4 @@
-/run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2/build/CMakeFiles/solutions.dir
-/run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2/build/CMakeFiles/OTHERS_two.dir
-/run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2/build/CMakeFiles/edit_cache.dir
-/run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2/build/CMakeFiles/rebuild_cache.dir
+/data/Programing/Algorithm_homework/others_2/build/CMakeFiles/solutions.dir
+/data/Programing/Algorithm_homework/others_2/build/CMakeFiles/OTHERS_two.dir
+/data/Programing/Algorithm_homework/others_2/build/CMakeFiles/edit_cache.dir
+/data/Programing/Algorithm_homework/others_2/build/CMakeFiles/rebuild_cache.dir

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/run/media/lukaszk/DC96861C9685F6F4/Programing/Algorithm_homework/others_2/solutions.cc" "CMakeFiles/solutions.dir/solutions.cc.o" "gcc" "CMakeFiles/solutions.dir/solutions.cc.o.d"
+  "/data/Programing/Algorithm_homework/others_2/solutions.cc" "CMakeFiles/solutions.dir/solutions.cc.o" "gcc" "CMakeFiles/solutions.dir/solutions.cc.o.d"
   )
 
 # Targets to which this target links.
