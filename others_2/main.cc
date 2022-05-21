@@ -18,5 +18,14 @@ int main() {
         printVec(taskTwoVecB);
         printVec( findSubsequence( taskTwoVecB ) );
     }
+
+    {
+        std::vector< int > taskThreeVec{ 1,2,3,4,5,6 };
+        std::vector< int > taskThreeOrder{ 2,4,3,5,1,0 };
+        printVec(taskThreeVec);
+        sortWithOrder(taskThreeVec, taskThreeOrder );
+        printVec( taskThreeVec );
+        
+    }
     
 }

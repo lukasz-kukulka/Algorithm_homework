@@ -63,6 +63,7 @@ void sortWithOrder(std::vector<int>& input_vec, std::vector<int>& order )
     int current_order_index{};
     while ( iterator < order.size() )
     {
+        
         if ( iterator == current_order_index || order[ iterator ] == -1 )
         {
             current_order_index++;
