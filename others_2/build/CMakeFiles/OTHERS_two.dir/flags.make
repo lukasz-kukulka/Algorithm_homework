@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/data/Programing/Algorithm_homework/others_2
+CXX_INCLUDES = 
 
-CXX_FLAGS = -Wall -Wextra -Werror -pedantic -Wconversion -O3 -std=gnu++20
+CXX_FLAGS = -Wall -Wextra -Werror -pedantic -Wconversion -g -std=gnu++20
 

@@ -1,5 +1,5 @@
 #include "solutions.h"
-// You can write and test your homework here :)
+
 int main() {
     {
         std::vector< int > taskOneVec{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -22,10 +22,11 @@ int main() {
     {
         std::vector< int > taskThreeVec{ 1,2,3,4,5,6 };
         std::vector< int > taskThreeOrder{ 2,4,3,5,1,0 };
+        //std::vector< int > taskThreeOrder{ 5,4,3,2,1,0 };
+        //std::vector< int > taskThreeOrder{ 0,1,2,3,4,5 };
         printVec(taskThreeVec);
         sortWithOrder(taskThreeVec, taskThreeOrder );
         printVec( taskThreeVec );
-        
     }
     
 }

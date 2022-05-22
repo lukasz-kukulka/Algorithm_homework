@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named solutions
-
-# Build rule for target.
-solutions: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 solutions
-.PHONY : solutions
-
-# fast build rule for target.
-solutions/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solutions.dir/build.make CMakeFiles/solutions.dir/build
-.PHONY : solutions/fast
-
-#=============================================================================
 # Target rules for targets named OTHERS_two
 
 # Build rule for target.
@@ -171,7 +158,7 @@ solutions.o: solutions.cc.o
 
 # target to build an object file
 solutions.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solutions.dir/build.make CMakeFiles/solutions.dir/solutions.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OTHERS_two.dir/build.make CMakeFiles/OTHERS_two.dir/solutions.cc.o
 .PHONY : solutions.cc.o
 
 solutions.i: solutions.cc.i
@@ -179,7 +166,7 @@ solutions.i: solutions.cc.i
 
 # target to preprocess a source file
 solutions.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solutions.dir/build.make CMakeFiles/solutions.dir/solutions.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OTHERS_two.dir/build.make CMakeFiles/OTHERS_two.dir/solutions.cc.i
 .PHONY : solutions.cc.i
 
 solutions.s: solutions.cc.s
@@ -187,7 +174,7 @@ solutions.s: solutions.cc.s
 
 # target to generate assembly for a file
 solutions.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solutions.dir/build.make CMakeFiles/solutions.dir/solutions.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OTHERS_two.dir/build.make CMakeFiles/OTHERS_two.dir/solutions.cc.s
 .PHONY : solutions.cc.s
 
 # Help Target
@@ -199,7 +186,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OTHERS_two"
-	@echo "... solutions"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

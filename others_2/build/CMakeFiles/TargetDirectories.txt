@@ -1,4 +1,3 @@
-/data/Programing/Algorithm_homework/others_2/build/CMakeFiles/solutions.dir
 /data/Programing/Algorithm_homework/others_2/build/CMakeFiles/OTHERS_two.dir
 /data/Programing/Algorithm_homework/others_2/build/CMakeFiles/edit_cache.dir
 /data/Programing/Algorithm_homework/others_2/build/CMakeFiles/rebuild_cache.dir
