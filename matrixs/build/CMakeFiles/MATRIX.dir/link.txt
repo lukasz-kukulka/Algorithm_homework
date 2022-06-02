@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MATRIX.dir/main.cpp.o -o MATRIX 
