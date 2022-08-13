@@ -30,16 +30,17 @@ int main() {
     
 
     std::vector< int > inputVecTaskThree { 2,3,1,8,7,10,14,12 };
-    auto val = getBeginHightValue( inputVecTaskThree );
-    if ( val.has_value() )
-    {
-        std::cout << val.value() ;
-    }
-    else
-    {
-        std::cout << "NO VALUE\n" ;
+    printResult( inputVecTaskThree, getBeginHightValue( inputVecTaskThree ) );
 
-    }
+    // if ( val.has_value() )
+    // {
+    //     std::cout << val.value() ;
+    // }
+    // else
+    // {
+    //     std::cout << "NO VALUE\n" ;
+
+    // }
     
 
     return 0;

@@ -18,4 +18,4 @@ std::optional < int > getBeginHightValue( std::vector< int >& input_vec );
 
 void printResult( std::vector< int >const & input_vec );
 void printResult( std::map < int, int > map ); 
-void printResult( std::vector< int >const & input_vec, int separate_index );
+void printResult( std::vector< int >const & input_vec, std::optional < int > separate_index );

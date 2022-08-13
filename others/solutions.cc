@@ -88,19 +88,27 @@ std::map < int, int > countFrequency( std::vector< int >const & input_vec)
 
     }
 
-    void printResult( std::vector< int >const & input_vec, int separate_index )
+    void printResult( std::vector< int >const & input_vec, std::optional < int > separate_index )
     {
-        std::string line( 80, '_');
-        std::cout << line << '\n';
-        std::cout << separate_index << " -> values '";
-        for ( int i = 0; i < separate_index; ++i )
+        if (!separate_index.value())
         {
-            std::cout << input_vec[i] << ",";
+            std::cout << "NO VALUE\n";
         }
-        std::cout << "' are lower and '";
-        for ( int i = separate_index + 1; i < input_vec.size(); ++i )
+        else
         {
-            std::cout << input_vec[i] << ",";
+            auto val = separate_index.value();
+            std::string line( 80, '_');
+            std::cout << line << '\n';
+            std::cout << input_vec[ val ] << " -> values '";
+            for ( int i = 0; i < val; ++i )
+            {
+                std::cout << input_vec[i] << ",";
+            }
+            std::cout << "' are lower and '";
+            for ( int i = val + 1; i < input_vec.size(); ++i )
+            {
+                std::cout << input_vec[i] << ",";
+            }
+            std::cout << "` are higher " << '\n';
         }
-        std::cout << "` are higher " << '\n';
     }
