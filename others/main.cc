@@ -3,7 +3,6 @@
 #include <iostream>
 #include <vector>
 
-// You can write and test your homework here :)
 int main() {
     {
         std::vector< int > toSort {1,2,3,4,5,6};
@@ -25,23 +24,10 @@ int main() {
         printResult( countFrequency( inputVecTaskTwo ) );
     }
 
-
-
+    {
+        std::vector< int > inputVecTaskThree { 2,3,1,8,7,10,14,12 };
+        printResult( inputVecTaskThree, getBeginHightValue( inputVecTaskThree ) );
+    }
     
-
-    std::vector< int > inputVecTaskThree { 2,3,1,8,7,10,14,12 };
-    printResult( inputVecTaskThree, getBeginHightValue( inputVecTaskThree ) );
-
-    // if ( val.has_value() )
-    // {
-    //     std::cout << val.value() ;
-    // }
-    // else
-    // {
-    //     std::cout << "NO VALUE\n" ;
-
-    // }
-    
-
     return 0;
 }
