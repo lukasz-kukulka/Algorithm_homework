@@ -110,10 +110,10 @@ int countMovesColour(Matrix & matrix) {
 bool isReturnZero ( MatrixSec const & matrix, Point const & point, char ch)
 {
     bool out_of_range{ point.x < 0 || point.y < 0 || point.x >= static_cast<int>(matrix.size()) || point.y >= static_cast<int>(matrix.front().size()) };
-    if ( ( ch != '0' && out_of_range ) || ch + 1 != matrix[point.x][point.y] )  {
-        return false;
+    if ( ch != '0' && ( out_of_range || ch + 1 != matrix[point.x][point.y] ) )  {
+        return true;
     }
-    return true;
+    return false;
 }
 
 int theLongestSequenceOnePoint ( MatrixSec const & matrix, Point point, char ch )
