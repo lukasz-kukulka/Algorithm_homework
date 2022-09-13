@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/OTHERS_two.dir/main.cc.o CMakeFiles/OTHERS_two.dir/solutions.cc.o -o OTHERS_two 
